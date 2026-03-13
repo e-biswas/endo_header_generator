@@ -18,13 +18,8 @@ env/
 .env
 *.env
 
-# Output files
-output/*.png
-output/*.jpg
-output/*.jpeg
-output/*.webp
-output/manifest.json
-output/contact_sheet.jpg
+# Output files — tracked intentionally
+# output/
 
 # Runtime titles file
 titles_runtime.txt
