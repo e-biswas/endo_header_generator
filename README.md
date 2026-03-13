@@ -58,6 +58,8 @@ python generate_headers.py --titles titles_endo_sample.txt --out output --mock
 streamlit run app.py
 ```
 
+Live demo: [eh-header.streamlit.app](https://eh-header.streamlit.app/)
+
 ## Notes
 
 - The brand palette is inferred from Endo Health's public website and app presence.
