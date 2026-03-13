@@ -58,7 +58,6 @@ python generate_headers.py --titles titles_endo_sample.txt --out output --mock
 streamlit run app.py
 ```
 
-
 ## Notes
 
 - The brand palette is inferred from Endo Health's public website and app presence.
