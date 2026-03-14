@@ -6,11 +6,9 @@ Features:
 - Builds a persistent brand-aware prompt scaffold
 - Creates one image per title using OpenAI Images API
 - Saves prompts, images, and a JSON manifest for reproducibility
-- Optional mock mode for local preview without API calls
 
 Usage:
     python generate_headers.py --titles titles_endo_sample.txt --out output
-    python generate_headers.py --titles titles.txt --out output --mock
 """
 
 from __future__ import annotations
