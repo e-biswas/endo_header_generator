@@ -53,7 +53,7 @@ This is a working prototype, not a production system. A few honest caveats:
 
 **Consistency is prompt-driven, not model-driven.** There's no technical mechanism that forces the model to match previous outputs — the visual coherence depends entirely on the style anchor being specific enough. OpenAI's image API doesn't support style references or seeds that persist across calls, so two runs on the same title can look different.
 
-**Category detection is keyword-based and German-specific.** The routing logic does a simple substring match against a fixed list of German keywords. It's fragile — a title that uses different phrasing, or titles in English, will fall through to a generic category. A classifier or embedding-based approach would be more robust.
+**Category detection uses a chat completion.** Each title is classified via a `gpt-4o-mini` call before the image prompt is built. This handles any language and phrasing correctly, but it adds a small extra API call per title and introduces a potential failure point — the code falls back to the "general" category if the response is malformed or the call fails.
 
 **The brand palette is inferred, not sourced.** I derived the color palette from Endo Health's public web presence. It's a reasonable approximation, but without access to an official brand guide, it's a guess.
 
